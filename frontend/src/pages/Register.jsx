@@ -18,7 +18,7 @@ const Register = () => {
     setError('');
 
     try {
-      await axios.post('http://localhost:8888/.netlify/functions/register', {
+      await axios.post('https://crudneon.netlify.app/.netlify/functions/register', {
         name,
         email,
         password

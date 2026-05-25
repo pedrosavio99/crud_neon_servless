@@ -18,7 +18,7 @@ const Dashboard = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get('http://localhost:8888/.netlify/functions/read-items');
+      const response = await axios.get('https://crudneon.netlify.app/.netlify/functions/read-items');
       setItems(response.data.items);
     } catch (err) {
       setError('Erro ao carregar itens');
@@ -32,14 +32,14 @@ const Dashboard = () => {
 
     try {
       if (editingId) {
-        await axios.put('http://localhost:8888/.netlify/functions/update-item', {
+        await axios.put('https://crudneon.netlify.app/.netlify/functions/update-item', {
           id: editingId,
           title,
           description
         });
         setSuccessMessage('Item atualizado com sucesso');
       } else {
-        await axios.post('http://localhost:8888/.netlify/functions/create-item', {
+        await axios.post('https://crudneon.netlify.app/.netlify/functions/create-item', {
           title,
           description
         });
@@ -70,7 +70,7 @@ const Dashboard = () => {
     if (!window.confirm('Tem certeza que deseja deletar este item?')) return;
 
     try {
-      await axios.delete('http://localhost:8888/.netlify/functions/delete-item', {
+      await axios.delete('https://crudneon.netlify.app/.netlify/functions/delete-item', {
         data: { id }
       });
       setSuccessMessage('Item deletado com sucesso');
