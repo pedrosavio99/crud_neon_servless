@@ -1,0 +1,17 @@
+# Local Netlify folder
+.netlify
+# Dependencies
+node_modules
+frontend/node_modules
+
+# Build
+frontend/dist
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# Netlify
+.netlify

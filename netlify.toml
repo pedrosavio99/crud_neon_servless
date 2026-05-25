@@ -1,0 +1,7 @@
+[build]
+  functions = "functions"
+  publish = "frontend/dist"
+
+[dev]
+  port = 8888
+  functions = "functions"
