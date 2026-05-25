@@ -1,8 +1,9 @@
 [build]
-  command = "cd frontend && npm run build"
-  publish = "frontend/dist"
-  functions = "functions"
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+  functions = "../functions"
 
 [dev]
-  command = "cd frontend && npm run dev"
+  command = "npm run dev"
   targetPort = 5173
